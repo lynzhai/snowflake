@@ -147,7 +147,8 @@ func (n *Node) Generate() ID {
 			}
 		}
 	} else {
-		n.step = 0
+		//n.step = 0
+		n.step = now & int64(1)
 	}
 
 	n.time = now
